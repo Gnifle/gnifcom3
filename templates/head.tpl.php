@@ -1,5 +1,7 @@
 <meta charset="UTF-8">
 
+<base href="<?php print is_localhost() ? '/gnifcom3/' : 'http://gnifcom3.gnifle.com/'; ?>">
+
 <link rel="stylesheet" href="css/global.css">
 
 <script type="text/javascript" src="js/lib/jQuery/jquery-3.1.0.js"></script>

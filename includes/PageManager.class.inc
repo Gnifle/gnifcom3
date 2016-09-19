@@ -8,7 +8,7 @@ class PageManager {
 
 		?>
 
-		<body class="<?php print $view->template ?>">
+		<body class="<?php print $view->template; ?>">
 
 			<?php get_template_part( 'templates', 'page' ); ?>
 
@@ -18,7 +18,7 @@ class PageManager {
 
 	}
 
-	public static function Title( $prefix = true ) {
+	public static function Title() {
 
 		global $view;
 
