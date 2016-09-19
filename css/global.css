@@ -117,7 +117,7 @@ body {
         font-family: "Titillium Web", sans-serif;
         font-size: 20px;
         font-variant: small-caps;
-        transition: background 1s ease-in; }
+        transition: background 1s ease-in 0.5s; }
         #header .menu .container .item:hover {
           background: rgba(0, 0, 0, 0.75);
           transition: background 0.1s ease-in; }
