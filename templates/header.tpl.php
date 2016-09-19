@@ -1,6 +1,12 @@
 <header id="header" role="header">
 
-	<?php get_template_part( 'templates', 'menu' ); ?>
+	<div class="menuline">
+
+		<?php get_template_part( 'templates/partials', 'header-logo' ); ?>
+
+		<?php get_template_part( 'templates', 'menu' ); ?>
+
+	</div>
 	
 	<?php if( is_frontpage() ) {
 		

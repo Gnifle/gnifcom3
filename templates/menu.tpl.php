@@ -14,7 +14,7 @@
 			<a href="about" class="link">About</a>
 		</li>
 		
-		<li class="item">
+		<li class="item is-parent">
 			
 			<a href="projects" class="link">Projects</a>
 			<ul class="sub-container">
