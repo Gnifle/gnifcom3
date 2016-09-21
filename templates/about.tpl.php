@@ -4,4 +4,4 @@ global $view;
 
 ?>
 
-<p>Content</p>
+<p>About</p>

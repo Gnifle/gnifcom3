@@ -1,5 +1,6 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Titillium+Web:200,300,400,600,700,900';
 @import 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Titillium+Web:200,300,400,600,700,900';
+@import 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Titillium+Web:200,300,400,600,700,900';
 * {
   box-sizing: border-box;
   font-family: sans-serif; }
@@ -36,31 +37,56 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-#header .menuline {
+#header .menuline, #content {
   margin-left: auto;
   margin-right: auto; }
 
-#header .menuline {
+#header .menuline, #content {
   width: 1200px; }
   @media (max-width: 1199px) {
-    #header .menuline {
+    #header .menuline, #content {
       width: 100% !important; } }
 
 body {
   height: 3000px; }
 
 #header {
+  position: relative;
   min-height: 400px;
-  border-bottom: 5px solid #164B65;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25)), url("../img/layout/header-workboard-pattern.png");
-  background-size: 100%, 47px; }
+  border-bottom: 5px solid #164B65; }
+  #header:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25)), url("../img/layout/header-workboard-pattern.png");
+    z-index: 2;
+    background-size: 100%, 47px; }
   #header .menuline {
-    display: flex; }
-    #header .menuline .logo .logo-link {
-      display: block;
-      padding: 20px 30px; }
-      #header .menuline .logo .logo-link .logo-img {
-        height: 60px; }
+    display: flex;
+    position: relative;
+    z-index: 3; }
+    #header .menuline .logo {
+      padding: 10px 20px; }
+      #header .menuline .logo .logo-link {
+        display: block;
+        padding: 10px;
+        transition: background 1s ease-in; }
+        #header .menuline .logo .logo-link:hover {
+          background: rgba(0, 0, 0, 0.75);
+          transition: background 0.1s ease-in; }
+        @media (max-width: 479px) {
+          #header .menuline .logo .logo-link {
+            padding: 5px; } }
+        #header .menuline .logo .logo-link .logo-img {
+          height: 60px; }
+          @media (max-width: 767px) {
+            #header .menuline .logo .logo-link .logo-img {
+              height: 50px; } }
+          @media (max-width: 479px) {
+            #header .menuline .logo .logo-link .logo-img {
+              height: 40px; } }
     #header .menuline .menu {
       width: 1200px;
       display: flex;
@@ -70,7 +96,7 @@ body {
       padding: 20px 30px;
       position: relative; }
       #header .menuline .menu .toggle {
-        display: block;
+        display: none;
         position: relative;
         background: transparent;
         border: none;
@@ -121,6 +147,13 @@ body {
             #header .menuline .menu .toggle.active .line:after {
               bottom: 0;
               transform: rotate(-45deg); }
+        @media (max-width: 767px) {
+          #header .menuline .menu .toggle {
+            display: block; } }
+        @media (max-width: 767px) {
+          #header .menuline .menu .toggle {
+            display: block;
+            margin: 0; } }
       #header .menuline .menu .container {
         display: flex;
         flex-direction: row;
@@ -143,9 +176,29 @@ body {
             #header .menuline .menu .container .item:hover .sub-container {
               opacity: 1;
               max-height: 400px; }
-              #header .menuline .menu .container .item:hover .sub-container .sub-item .link {
-                opacity: 1;
-                transition: opacity 0.1s ease 0.3s; }
+              #header .menuline .menu .container .item:hover .sub-container .sub-item {
+                opacity: 1; }
+                #header .menuline .menu .container .item:hover .sub-container .sub-item:nth-child(1) {
+                  transition-delay: 0.35s; }
+                #header .menuline .menu .container .item:hover .sub-container .sub-item:nth-child(2) {
+                  transition-delay: 0.4s; }
+                #header .menuline .menu .container .item:hover .sub-container .sub-item:nth-child(3) {
+                  transition-delay: 0.45s; }
+                #header .menuline .menu .container .item:hover .sub-container .sub-item:nth-child(4) {
+                  transition-delay: 0.5s; }
+                #header .menuline .menu .container .item:hover .sub-container .sub-item:nth-child(5) {
+                  transition-delay: 0.55s; }
+                #header .menuline .menu .container .item:hover .sub-container .sub-item:nth-child(6) {
+                  transition-delay: 0.6s; }
+                #header .menuline .menu .container .item:hover .sub-container .sub-item:nth-child(7) {
+                  transition-delay: 0.65s; }
+                #header .menuline .menu .container .item:hover .sub-container .sub-item:nth-child(8) {
+                  transition-delay: 0.7s; }
+                #header .menuline .menu .container .item:hover .sub-container .sub-item:nth-child(9) {
+                  transition-delay: 0.75s; }
+                #header .menuline .menu .container .item:hover .sub-container .sub-item .link {
+                  opacity: 1;
+                  transition: opacity 0.1s ease 0.3s; }
           #header .menuline .menu .container .item .link, #header .menuline .menu .container .item .link:link, #header .menuline .menu .container .item .link:active, #header .menuline .menu .container .item .link:visited {
             display: block;
             padding: 10px;
@@ -163,12 +216,29 @@ body {
             #header .menuline .menu .container .item .sub-container .sub-item {
               white-space: nowrap;
               text-align: right;
+              opacity: 0;
               border-right: 0;
-              transition: border-right 0.1s ease; }
+              transition: border-right 0.1s ease, opacity 0.1s ease 0.5s; }
               #header .menuline .menu .container .item .sub-container .sub-item:hover {
                 border-right: 3px solid #FFF; }
               #header .menuline .menu .container .item .sub-container .sub-item .link {
                 opacity: 0;
                 transition: opacity 0s ease 0.5s; }
+        @media (max-width: 767px) {
+          #header .menuline .menu .container {
+            display: none; } }
+      @media (max-width: 479px) {
+        #header .menuline .menu {
+          padding: 10px 20px; } }
+
+#header .menuline, #content {
+  margin-left: auto;
+  margin-right: auto; }
+
+#header .menuline, #content {
+  width: 1200px; }
+  @media (max-width: 1199px) {
+    #header .menuline, #content {
+      width: 100% !important; } }
 
 /*# sourceMappingURL=global.css.map */

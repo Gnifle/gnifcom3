@@ -32,9 +32,9 @@ class Router {
 	}
 
 	public function about( $params ) {
-		$this->view->template       =   'frontpage';
+		$this->view->template       =   'about';
 		$this->view->args           =   $params;
-		$this->view->title          =   'Portfolio';
+		$this->view->title          =   'About';
 	}
 
 	public function show_404( $params ) {
