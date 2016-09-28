@@ -175,33 +175,34 @@ body {
             transition: background 0.1s ease-in; }
             #header .menuline .menu .container .item:hover .sub-container {
               opacity: 1;
-              max-height: 400px; }
+              max-height: 400px;
+              transition: max-height 0.25s ease-in 0.25s; }
               #header .menuline .menu .container .item:hover .sub-container .sub-item {
                 opacity: 1; }
                 #header .menuline .menu .container .item:hover .sub-container .sub-item:nth-child(1) {
-                  transition-delay: 0.35s; }
+                  transition-delay: 0s, 525ms; }
                 #header .menuline .menu .container .item:hover .sub-container .sub-item:nth-child(2) {
-                  transition-delay: 0.4s; }
+                  transition-delay: 0s, 600ms; }
                 #header .menuline .menu .container .item:hover .sub-container .sub-item:nth-child(3) {
-                  transition-delay: 0.45s; }
+                  transition-delay: 0s, 675ms; }
                 #header .menuline .menu .container .item:hover .sub-container .sub-item:nth-child(4) {
-                  transition-delay: 0.5s; }
+                  transition-delay: 0s, 750ms; }
                 #header .menuline .menu .container .item:hover .sub-container .sub-item:nth-child(5) {
-                  transition-delay: 0.55s; }
+                  transition-delay: 0s, 825ms; }
                 #header .menuline .menu .container .item:hover .sub-container .sub-item:nth-child(6) {
-                  transition-delay: 0.6s; }
+                  transition-delay: 0s, 900ms; }
                 #header .menuline .menu .container .item:hover .sub-container .sub-item:nth-child(7) {
-                  transition-delay: 0.65s; }
+                  transition-delay: 0s, 975ms; }
                 #header .menuline .menu .container .item:hover .sub-container .sub-item:nth-child(8) {
-                  transition-delay: 0.7s; }
+                  transition-delay: 0s, 1050ms; }
                 #header .menuline .menu .container .item:hover .sub-container .sub-item:nth-child(9) {
-                  transition-delay: 0.75s; }
+                  transition-delay: 0s, 1125ms; }
                 #header .menuline .menu .container .item:hover .sub-container .sub-item .link {
                   opacity: 1;
                   transition: opacity 0.1s ease 0.3s; }
           #header .menuline .menu .container .item .link, #header .menuline .menu .container .item .link:link, #header .menuline .menu .container .item .link:active, #header .menuline .menu .container .item .link:visited {
             display: block;
-            padding: 10px;
+            padding: 10px 10px 10px 20px;
             color: inherit;
             text-decoration: none; }
           #header .menuline .menu .container .item .sub-container {
@@ -212,13 +213,14 @@ body {
             right: 0;
             max-height: 0;
             overflow-y: hidden;
-            transition: max-height 0.5s ease-out 0.25s; }
+            transition: max-height 0.5s ease-in 0.25s; }
             #header .menuline .menu .container .item .sub-container .sub-item {
               white-space: nowrap;
               text-align: right;
               opacity: 0;
               border-right: 0;
-              transition: border-right 0.1s ease, opacity 0.1s ease 0.5s; }
+              transition: border-right 0.1s ease, opacity 0.1s ease;
+              transition-delay: 0s, 0.5s; }
               #header .menuline .menu .container .item .sub-container .sub-item:hover {
                 border-right: 3px solid #FFF; }
               #header .menuline .menu .container .item .sub-container .sub-item .link {

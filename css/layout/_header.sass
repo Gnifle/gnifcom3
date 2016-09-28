@@ -163,13 +163,14 @@ body
 						.sub-container
 							opacity:        1
 							max-height:     400px
+							transition:     max-height 0.25s ease-in 0.25s
 
 							.sub-item
 								opacity:        1
 								
 								@for $i from 1 through 9
 									&:nth-child( #{$i} )
-										transition-delay:   ( 0.3s + ( 0.05s * $i ) )
+										transition-delay:   0s, ( 450ms + ( 75ms * $i ) )
 
 								.link
 									opacity:        1
@@ -177,26 +178,27 @@ body
 
 					.link, .link:link, .link:active, .link:visited
 						display:            block
-						padding:            10px
+						padding:            10px 10px 10px 20px
 						color:              inherit
 						text-decoration:    none
 
 					.sub-container
-						background:                 $hover_background
-						opacity:                    1
-						position:                   absolute
-						top:                        100%
-						right:                      0
-						max-height:                 0
-						overflow-y:                 hidden
-						transition:                 max-height 0.5s ease-out 0.25s
+						background:         $hover_background
+						opacity:            1
+						position:           absolute
+						top:                100%
+						right:              0
+						max-height:         0
+						overflow-y:         hidden
+						transition:         max-height 0.5s ease-in 0.25s
 
 						.sub-item
-							white-space:    nowrap
-							text-align:     right
-							opacity:        0
-							border-right:   0
-							transition:     border-right 0.1s ease, opacity 0.1s ease 0.5s
+							white-space:        nowrap
+							text-align:         right
+							opacity:            0
+							border-right:       0
+							transition:         border-right 0.1s ease, opacity 0.1s ease
+							transition-delay:   0s, 0.5s
 
 							&:hover
 								border-right:       3px solid #FFF
