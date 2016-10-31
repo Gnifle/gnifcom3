@@ -10,8 +10,8 @@ define( 'PAGE_PREFIX', 'Daniel Gnifle | ' );
 
 $router         =   new Router();
 $view           =   $router->get_view();
-$db_manager     =   DBManager::Instance();
-$db             =   $db_manager->get_connection();
+//$db_manager     =   DBManager::Instance();
+//$db             =   $db_manager->get_connection();
 
 //$sql    =   <<<SQL
 //	SELECT *

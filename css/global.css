@@ -37,14 +37,14 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-#header .menuline, #content {
+#header .menuline, #content .skill-view {
   margin-left: auto;
   margin-right: auto; }
 
-#header .menuline, #content {
+#header .menuline {
   width: 1200px; }
   @media (max-width: 1199px) {
-    #header .menuline, #content {
+    #header .menuline {
       width: 100% !important; } }
 
 body {
@@ -202,7 +202,7 @@ body {
                   transition: opacity 0.1s ease 0.3s; }
           #header .menuline .menu .container .item .link, #header .menuline .menu .container .item .link:link, #header .menuline .menu .container .item .link:active, #header .menuline .menu .container .item .link:visited {
             display: block;
-            padding: 10px 10px 10px 20px;
+            padding: 10px;
             color: inherit;
             text-decoration: none; }
           #header .menuline .menu .container .item .sub-container {
@@ -225,7 +225,8 @@ body {
                 border-right: 3px solid #FFF; }
               #header .menuline .menu .container .item .sub-container .sub-item .link {
                 opacity: 0;
-                transition: opacity 0s ease 0.5s; }
+                transition: opacity 0s ease 0.5s;
+                padding-left: 20px; }
         @media (max-width: 767px) {
           #header .menuline .menu .container {
             display: none; } }
@@ -233,14 +234,35 @@ body {
         #header .menuline .menu {
           padding: 10px 20px; } }
 
-#header .menuline, #content {
+#header .menuline, #content .skill-view {
   margin-left: auto;
   margin-right: auto; }
 
-#header .menuline, #content {
+#header .menuline {
   width: 1200px; }
   @media (max-width: 1199px) {
-    #header .menuline, #content {
+    #header .menuline {
       width: 100% !important; } }
+
+#content .skill-view {
+  display: flex;
+  max-width: 80em;
+  width: 100%; }
+  #content .skill-view .skill-active-view {
+    width: 40%; }
+  #content .skill-view .skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%; }
+    #content .skill-view .skill-container .skill {
+      display: inline-flex;
+      width: 100%;
+      min-width: calc( 100% / 5 );
+      max-width: calc( 100% / 8 ); }
+
+pre {
+  font-family: "Consolas", monospace;
+  font-size: 11px;
+  margin: 10px 0; }
 
 /*# sourceMappingURL=global.css.map */

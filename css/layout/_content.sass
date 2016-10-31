@@ -2,5 +2,26 @@
 @import '../helpers/mixins'
 
 #content
-	@extend     %defaultWidths
-	@extend     %centerHorizontally
+	//@extend     %defaultWidths
+	//@extend     %centerHorizontally
+	
+	.skill-view
+		@extend     %centerHorizontally
+		display:    flex
+		max-width:  $page-width
+		width:      100%
+		
+		.skill-active-view
+			width:      40%
+			
+		.skill-container
+			display:    flex
+			flex-wrap:  wrap
+			width:      100%
+		
+			.skill
+				display:    inline-flex
+				width:      100%
+				min-width:  calc( 100% / 5 )
+				max-width:  calc( 100% / 8 )
+		
